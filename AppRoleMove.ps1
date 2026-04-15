@@ -116,7 +116,9 @@ function Invoke-WithRetry {
 
 function Connect-Graph([string]$TenantId) {
     $scopes = @(
-        "Directory.Read.All"
+        "Directory.Read.All",
+        "Application.ReadWrite.All",
+        "AppRoleAssignment.ReadWrite.All"
     )
 
     Write-Section "Connect to Microsoft Graph"
